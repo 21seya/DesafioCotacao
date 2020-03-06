@@ -1,0 +1,25 @@
+{% extends "cotacao/base.html" %}
+
+{% block content %}
+    {{msg}}
+    
+    {{moedas}}
+    <ul>
+        {% for moeda in moedas %}
+        <li>{{moeda.codigo}}</li>
+        <li>{{moeda.tipo}}</li>
+        <li>{{moeda.nome}}</li>
+        <li>{{moeda.simbolo}}</li>
+        <li>{{moeda.compra}}</li>
+        <li>{{moeda.venda}}</li>
+        <li>{{moeda.data}}</li>
+        {% endfor %}
+    </ul>
+    {{paises}}
+    <ul>
+        {% for pais in paises %}
+        <li>{{pais.nome}}</li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
+
